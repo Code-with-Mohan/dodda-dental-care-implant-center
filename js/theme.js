@@ -181,7 +181,8 @@
             animateOut: 'fadeOut',
             animateIn: 'fadeIn',
             smartSpeed: 1000,
-            autoplay: 5000,
+            autoplay: true,
+            autoplayTimeout: 5000,
             autoplayHoverPause: false,
             mouseDrag: false
         });
