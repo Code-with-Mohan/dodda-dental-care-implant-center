@@ -30,6 +30,11 @@ body {
   font-weight: 400;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .faq_timeline.main-timeline .timeline-content:hover,
 .testimonial_timeline.main-timeline .timeline-content:hover,
 a:active,
@@ -221,11 +226,26 @@ img {
 
 .social-links {
   position: fixed;
-  z-index: 9;
+  z-index: 50;
   right: 12px;
   text-align: center;
   top: 37%;
   width: 50px;
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    right: 5px;
+    top: 45%;
+    width: 45px;
+    z-index: 15;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links {
+    display: none;
+  }
 }
 
 .social-icon-one {
@@ -438,7 +458,15 @@ img {
 
 .t_wrap {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .t_wrap {
+    min-height: auto;
+  }
 }
 
 .header-one {
@@ -614,7 +642,7 @@ img {
 .banner-slide__content h2 {
   margin: 0 0 18px;
   color: #13324f;
-  font-size: 52px;
+  font-size: clamp(2.4rem, 4.4vw, 3.25rem);
   line-height: 1.08;
   font-weight: 800;
 }
@@ -622,7 +650,7 @@ img {
 .banner-slide__content p {
   margin: 0 0 28px;
   color: #4d6375;
-  font-size: 18px;
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
   line-height: 1.75;
 }
 
@@ -744,6 +772,11 @@ img {
 }
 
 @media (max-width: 991px) {
+  .social-links,
+  .appointment {
+    display: none;
+  }
+
   .banner-carousel,
   .banner-carousel .item,
   .banner-slide {
@@ -762,12 +795,12 @@ img {
   }
 
   .banner-slide__content h2 {
-    font-size: 42px;
+    font-size: clamp(1.9rem, 4.7vw, 2.7rem);
   }
 
   .banner-slide__content p {
-    font-size: 17px;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.65;
   }
 
   .banner-carousel .owl-nav .owl-prev {
@@ -784,43 +817,70 @@ img {
 }
 
 @media (max-width: 767px) {
+  .social-links,
+  .appointment {
+    display: none;
+  }
+
+  .mobilewhatsapp {
+    width: 54px;
+    height: 54px;
+    right: 12px;
+    bottom: 18px;
+    z-index: 40;
+  }
+
   .banner-carousel,
   .banner-carousel .item,
   .banner-slide {
-    height: 500px;
-    min-height: 500px;
+    height: auto;
+    min-height: 0;
   }
 
   .banner-slide {
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
   }
 
   .banner-slide::before {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.92) 28%, rgba(255, 255, 255, 0.8) 56%, rgba(255, 255, 255, 0.22) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.76) 0%, rgba(255, 255, 255, 0.5) 48%, rgba(255, 255, 255, 0.92) 100%);
+  }
+
+  .banner-slide__media {
+    position: relative;
+    height: 280px;
   }
 
   .banner-slide__content {
-    width: calc(100% - 40px);
-    margin: 0 20px 84px;
+    width: calc(100% - 32px);
+    margin: -28px 16px 22px;
+    padding: 22px 18px 24px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(19, 50, 79, 0.08);
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(19, 50, 79, 0.08);
+    align-items: flex-start;
   }
 
   .banner-slide__eyebrow {
-    margin-bottom: 14px;
-    padding: 8px 14px;
-    font-size: 11px;
-    letter-spacing: 0.07em;
+    margin-bottom: 12px;
+    padding: 7px 12px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
   }
 
   .banner-slide__content h2 {
-    margin-bottom: 14px;
-    font-size: 30px;
-    line-height: 1.15;
+    margin-bottom: 12px;
+    font-size: clamp(1.65rem, 8vw, 2.1rem);
+    line-height: 1.12;
   }
 
   .banner-slide__content p {
-    margin-bottom: 20px;
-    font-size: 15px;
-    line-height: 1.65;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+    line-height: 1.55;
   }
 
   .banner-slide__actions {
@@ -829,15 +889,15 @@ img {
   }
 
   .banner-slide__btn {
-    min-height: 48px;
-    padding: 13px 18px;
-    font-size: 14px;
+    min-height: 46px;
+    padding: 12px 16px;
+    font-size: 13px;
   }
 
   .banner-carousel .owl-nav .owl-prev,
   .banner-carousel .owl-nav .owl-next {
     top: auto;
-    bottom: 18px;
+    bottom: 14px;
     width: 42px;
     height: 42px;
     font-size: 16px;
@@ -859,20 +919,31 @@ img {
 
   .banner-carousel .owl-dots {
     left: 50%;
-    bottom: 32px;
+    bottom: 12px;
     transform: translateX(-50%);
     gap: 8px;
   }
 }
 
 @media (max-width: 480px) {
+  .banner-slide__media {
+    height: 240px;
+  }
+
+  .banner-slide__content {
+    width: calc(100% - 24px);
+    margin: -22px 12px 18px;
+    padding: 18px 14px 20px;
+    border-radius: 20px;
+  }
+
   .banner-slide__content h2 {
-    font-size: 26px;
+    font-size: 1.55rem;
   }
 
   .banner-slide__content p {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .banner-slide__actions {
@@ -882,6 +953,13 @@ img {
 
   .banner-slide__btn {
     width: 100%;
+  }
+
+  .banner-carousel .owl-nav .owl-prev,
+  .banner-carousel .owl-nav .owl-next {
+    width: 38px;
+    height: 38px;
+    bottom: 10px;
   }
 }
 
@@ -2760,7 +2838,7 @@ a.serlinks {
 .appointment {
   position: fixed;
   left: 0;
-  z-index: 99;
+  z-index: 98;
   top: 29%;
   background: #171717;
   color: #ed83cb;
@@ -2771,11 +2849,30 @@ a.serlinks {
   writing-mode: vertical-rl;
   text-orientation: upright;
   letter-spacing: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: fit-content;
 }
 
 .appointment:hover {
   background: #df24a3;
   color: #fff;
+}
+
+/* Hide appointment button on very small mobile screens */
+@media (max-width: 768px) {
+  .appointment {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .appointment {
+    padding: 8px 6px;
+    font-size: 16px;
+    top: 35%;
+  }
 }
 
 .appointment-one {
