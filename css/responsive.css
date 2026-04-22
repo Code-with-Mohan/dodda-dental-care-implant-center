@@ -758,6 +758,14 @@
         left: 0
     }
 
+    .header-one__cta,
+    .header-one__cta-content,
+    .header-one__cta-icon,
+    .header-one__cta-text,
+    .appointment {
+        display: none !important
+    }
+
     .footer-widget__social,
     .ggreview_icon {
         bottom: 0;

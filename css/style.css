@@ -971,18 +971,7 @@ img {
   }
 
   .banner-slide__art {
-    order: -1;
-    min-height: 0;
-    width: min(100%, 360px);
-    margin: 0 auto;
-    padding-right: 0;
-  }
-
-  .banner-slide__art-card {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    max-height: 220px;
+    display: none;
   }
 
   .banner-slide__title {
@@ -1033,9 +1022,9 @@ img {
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    padding: 18px 14px 22px;
-    gap: 14px;
-    min-height: 560px;
+    padding: 22px 14px 34px;
+    gap: 12px;
+    min-height: 0;
   }
 
   .banner-slide::before {
@@ -1062,7 +1051,7 @@ img {
   }
 
   .banner-slide__title {
-    font-size: clamp(1.45rem, 6.8vw, 2rem);
+    font-size: clamp(1.4rem, 6.4vw, 1.9rem);
   }
 
   .banner-slide__title span {
@@ -1078,39 +1067,11 @@ img {
   }
 
   .banner-slide__art {
-    order: 1;
-    width: min(100%, 280px);
-    min-height: 0;
-  }
-
-  .banner-slide__art-card {
-    height: auto;
-    aspect-ratio: 4 / 3;
-    max-height: 200px;
-    border-radius: 22px;
-  }
-
-  .banner-slide__art--badge .banner-slide__art-card {
-    aspect-ratio: 1 / 1;
-    padding: 14px;
-    gap: 10px;
-    max-height: 210px;
+    display: none;
   }
 
   .banner-slide--treatments .banner-slide__art {
     display: none;
-  }
-
-  .banner-slide__badge-circle {
-    width: min(76%, 180px);
-  }
-
-  .banner-slide__badge-circle img {
-    width: 74%;
-  }
-
-  .banner-slide__art-caption {
-    font-size: 0.92rem;
   }
 
   .banner-slide__actions {
@@ -1121,8 +1082,8 @@ img {
 
   .banner-slide__btn {
     min-height: 44px;
-    padding: 0 18px;
-    font-size: 0.92rem;
+    padding: 0 16px;
+    font-size: 0.9rem;
   }
 
   .banner-carousel .owl-dots {
@@ -1143,7 +1104,7 @@ img {
   }
 
   .banner-slide__list li {
-    font-size: 0.86rem;
+    font-size: 0.84rem;
   }
 
   .banner-slide__actions {
@@ -1154,18 +1115,6 @@ img {
   .banner-slide__btn {
     width: 100%;
     border-radius: 18px;
-  }
-
-  .banner-slide__art {
-    width: min(100%, 240px);
-  }
-
-  .banner-slide__art-card {
-    max-height: 180px;
-  }
-
-  .banner-slide__art--badge .banner-slide__art-card {
-    max-height: 185px;
   }
 
   .banner-carousel .owl-dots {
