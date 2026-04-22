@@ -1125,3 +1125,86 @@
 }
 
 /* Homepage hero responsive behavior is defined in style.css */
+
+@media (max-width: 768px) {
+    .header-one__cta,
+    .header-one__cta-content,
+    .header-one__cta-icon,
+    .header-one__cta-text,
+    .email_,
+    .social-links,
+    .appointment,
+    .banner-carousel .owl-nav,
+    .banner-slide__shape,
+    .banner-slide__eyebrow,
+    .banner-slide__list,
+    .banner-slide__art {
+        display: none !important
+    }
+
+    .banner-carousel,
+    .banner-carousel .item,
+    .banner-slide {
+        min-height: 0 !important;
+        height: auto !important
+    }
+
+    .banner-slide {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        padding: 18px 12px 30px !important;
+        gap: 12px !important
+    }
+
+    .banner-slide::before {
+        opacity: .05 !important;
+        background-size: 160px auto !important
+    }
+
+    .banner-slide__content {
+        order: 1;
+        width: 100% !important;
+        max-width: 520px !important;
+        margin: 8px auto 0 !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 10px !important
+    }
+
+    .banner-slide__title {
+        font-size: clamp(1.35rem, 5.8vw, 1.85rem) !important;
+        line-height: 1.08 !important;
+        max-width: 18ch;
+        margin: 0 auto !important
+    }
+
+    .banner-slide__title span {
+        border-bottom-width: 3px !important
+    }
+
+    .banner-slide__actions {
+        width: 100% !important;
+        max-width: 420px !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        margin-top: 4px !important
+    }
+
+    .banner-slide__btn {
+        min-height: 44px !important;
+        padding: 0 16px !important;
+        font-size: .9rem !important
+    }
+
+    .banner-slide__btn--primary,
+    .banner-slide__btn--secondary {
+        width: 100%
+    }
+
+    .banner-carousel .owl-dots {
+        bottom: 6px !important
+    }
+}
