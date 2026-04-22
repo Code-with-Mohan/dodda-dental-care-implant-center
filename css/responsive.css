@@ -1127,6 +1127,10 @@
 /* Homepage hero responsive behavior is defined in style.css */
 
 @media (max-width: 768px) {
+    .t_wrap {
+        padding-top: 92px
+    }
+
     .header-one__cta,
     .header-one__cta-content,
     .header-one__cta-icon,
@@ -1155,7 +1159,7 @@
         align-items: center;
         justify-content: flex-start;
         text-align: center;
-        padding: 18px 12px 30px !important;
+        padding: 12px 12px 30px !important;
         gap: 12px !important
     }
 
@@ -1168,7 +1172,7 @@
         order: 1;
         width: 100% !important;
         max-width: 520px !important;
-        margin: 8px auto 0 !important;
+        margin: 0 auto !important;
         align-items: center !important;
         text-align: center !important;
         gap: 10px !important
